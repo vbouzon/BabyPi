@@ -30,7 +30,8 @@ export class Server {
         var readStream = this.get_feed();
         this.readStream = readStream;
 
-        this.readStream.on("data", this.broadcast);
+        readStream = readStream.pipe(new Splitter(NALseparator));
+        readStream.on("data", this.broadcast);
     }
 
 
@@ -74,7 +75,7 @@ export class Server {
             if (action == "REQUESTSTREAM")
                 this.start_feed();
             if (action == "STOPSTREAM")
-                this.readStream.pause();
+                //this.readStream.pause();
         });
 
         socket.on('close',  () => {

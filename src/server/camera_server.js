@@ -18,7 +18,8 @@ var Server = (function () {
         this.start_feed = function () {
             var readStream = _this.get_feed();
             _this.readStream = readStream;
-            _this.readStream.on("data", _this.broadcast);
+            readStream = readStream.pipe(new Splitter(NALseparator));
+            readStream.on("data", _this.broadcast);
         };
         this.get_feed = function () {
             return child.spawn('raspivid', ['-t', '0', '-o', '-', '-w', _this.options.width.toString(), '-h', _this.options.height.toString(), '-fps', _this.options.fps.toString()], { stdio: ['ignore', 'pipe', 'ignore'] }).stdout;
@@ -47,7 +48,9 @@ var Server = (function () {
                 if (action == "REQUESTSTREAM")
                     _this.start_feed();
                 if (action == "STOPSTREAM")
-                    _this.readStream.pause();
+                    //this.readStream.pause();
+                    ;
+                //this.readStream.pause();
             });
             socket.on('close', function () {
                 //this.readStream.cl;
