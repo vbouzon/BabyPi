@@ -32,7 +32,7 @@ export class Server {
 
         var spl = new Splitter(NALseparator);
         readStream = readStream.pipe(spl);
-        spl.on("data", this.broadcast);
+        readStream.on("data", this.broadcast);
     }
 
 
