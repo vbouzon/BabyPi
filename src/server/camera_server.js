@@ -7,8 +7,8 @@ var Server = (function () {
     function Server() {
         var _this = this;
         this.options = {
-            width: 960,
-            height: 540,
+            width: 640,
+            height: 480,
             fps: 12
         };
         this.initialize = function (server) {

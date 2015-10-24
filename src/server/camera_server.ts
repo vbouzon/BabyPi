@@ -14,8 +14,8 @@ export class Server {
     private readStream: stream.Readable;
 
     options = {
-        width: 960,
-        height: 540,
+        width: 640,
+        height: 480,
         fps: 12
     }
 
