@@ -20,7 +20,7 @@ var Server = (function () {
             _this.readStream = readStream;
             var spl = new Splitter(NALseparator);
             readStream = readStream.pipe(spl);
-            spl.on("data", _this.broadcast);
+            readStream.on("data", _this.broadcast);
         };
         this.get_feed = function () {
             return child.spawn('raspivid', ['-t', '0', '-o', '-', '-w', _this.options.width.toString(), '-h', _this.options.height.toString(), '-fps', _this.options.fps.toString()], { stdio: ['ignore', 'pipe', 'ignore'] }).stdout;
