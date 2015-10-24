@@ -30,8 +30,7 @@ export class Server {
         var readStream = this.get_feed();
         this.readStream = readStream;
 
-        readStream = readStream.pipe(new split.Splitter(NALseparator));
-        readStream.on("data", this.broadcast);
+        this.readStream.on("data", this.broadcast);
     }
 
 
