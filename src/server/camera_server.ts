@@ -32,7 +32,7 @@ export class Server {
 
         var spl = new Splitter(NALseparator);
         readStream = readStream.pipe(spl);
-        readStream.on("data", this.broadcast);
+        spl.on("data", this.broadcast);
     }
 
 
@@ -51,7 +51,7 @@ export class Server {
 
             //socket.buzy = true;
             //socket.buzy = false;
-
+            console.log(data);
             socket.send(Buffer.concat([NALseparator, data]), { binary: true }, function ack(error) {
                 //socket.buzy = false;
             });
