@@ -1,7 +1,7 @@
 /// <reference path="../typings/ws/ws.d.ts" />
 var WebSocketServer = require('ws');
 var child = require('child_process');
-var split = require('stream-split');
+var Splitter = require('stream-split');
 var NALseparator = new Buffer([0, 0, 0, 1]); //NAL break
 var Server = (function () {
     function Server() {
