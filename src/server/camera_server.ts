@@ -68,7 +68,7 @@ export class Server {
             height: this.options.height,
         }));
 
-        socket.on("message", function (data) {
+        socket.on("message",  (data) => {
             var cmd = "" + data, action = data.split(' ')[0];
             console.log("Incomming action '%s'", action);
 
@@ -78,8 +78,8 @@ export class Server {
                 this.readStream.pause();
         });
 
-        socket.on('close', function () {
-            this.readStream.end();
+        socket.on('close',  () => {
+            //this.readStream.cl;
             console.log('stopping client interval');
         });
     }

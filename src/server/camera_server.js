@@ -46,12 +46,12 @@ var Server = (function () {
                 var cmd = "" + data, action = data.split(' ')[0];
                 console.log("Incomming action '%s'", action);
                 if (action == "REQUESTSTREAM")
-                    this.start_feed();
+                    _this.start_feed();
                 if (action == "STOPSTREAM")
-                    this.readStream.pause();
+                    _this.readStream.pause();
             });
             socket.on('close', function () {
-                this.readStream.end();
+                //this.readStream.cl;
                 console.log('stopping client interval');
             });
         };
