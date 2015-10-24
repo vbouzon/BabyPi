@@ -12,7 +12,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>0d23e014-1fed-43e3-a9d0-d42072dfefc1</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>server.ts</StartupFile>
+    <StartupFile>server.js</StartupFile>
     <StartWebBrowser>True</StartWebBrowser>
     <SearchPath>
     </SearchPath>
@@ -34,15 +34,55 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="Scripts\typings\node\node.d.ts" />
-    <TypeScriptCompile Include="server.ts" />
     <Content Include="package.json" />
-    <Content Include="README.md" />
+    <Content Include="public\index.html" />
+    <Content Include="vendor\.gitignore" />
+    <Content Include="vendor\.npmignore" />
+    <Content Include="vendor\AUTHORS" />
+    <Content Include="vendor\canvas\README.md" />
+    <Content Include="vendor\LICENSE" />
+    <Content Include="vendor\package.json" />
+    <Content Include="vendor\README.md" />
+    <TypeScriptCompile Include="server\camera_server.ts" />
+    <TypeScriptCompile Include="server.ts" />
+    <TypeScriptCompile Include="typings\express\express.d.ts" />
+    <TypeScriptCompile Include="typings\mime\mime.d.ts" />
+    <TypeScriptCompile Include="typings\node\node.d.ts" />
+    <TypeScriptCompile Include="typings\serve-static\serve-static.d.ts" />
+    <TypeScriptCompile Include="typings\ws\ws.d.ts" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Scripts\" />
-    <Folder Include="Scripts\typings\" />
-    <Folder Include="Scripts\typings\node\" />
+    <Folder Include="public\" />
+    <Folder Include="server\" />
+    <Folder Include="typings\" />
+    <Folder Include="typings\express\" />
+    <Folder Include="typings\mime\" />
+    <Folder Include="typings\node\" />
+    <Folder Include="typings\serve-static\" />
+    <Folder Include="typings\ws\" />
+    <Folder Include="vendor\" />
+    <Folder Include="vendor\broadway\" />
+    <Folder Include="vendor\canvas\" />
+    <Folder Include="vendor\utils\" />
+    <Folder Include="vendor\wsavc\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="public\main.js" />
+    <Compile Include="public\_main.js" />
+    <Compile Include="vendor\broadway\Decoder.js" />
+    <Compile Include="vendor\canvas\FilterWebGLCanvas.js" />
+    <Compile Include="vendor\canvas\Program.js" />
+    <Compile Include="vendor\canvas\Script.js" />
+    <Compile Include="vendor\canvas\Shader.js" />
+    <Compile Include="vendor\canvas\Texture.js" />
+    <Compile Include="vendor\canvas\WebGLCanvas.js" />
+    <Compile Include="vendor\canvas\YUVWebGLCanvas.js" />
+    <Compile Include="vendor\utils\assert.js" />
+    <Compile Include="vendor\utils\error.js" />
+    <Compile Include="vendor\utils\glUtils.js" />
+    <Compile Include="vendor\utils\inherit.js" />
+    <Compile Include="vendor\utils\Size.js" />
+    <Compile Include="vendor\wsavc\index.js" />
   </ItemGroup>
   <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
