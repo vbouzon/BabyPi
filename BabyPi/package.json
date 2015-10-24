@@ -1,0 +1,10 @@
+{
+  "name": "BabyPi",
+  "version": "0.0.0",
+  "description": "BabyPi",
+  "main": "app.js",
+  "author": {
+    "name": "vbn",
+    "email": ""
+  }
+}
