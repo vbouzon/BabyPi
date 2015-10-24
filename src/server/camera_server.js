@@ -22,7 +22,7 @@ var Server = (function () {
             readStream.on("data", _this.broadcast);
         };
         this.get_feed = function () {
-            return child.spawn('raspivid', ['-t', '0', '-o', '-', '-w', _this.options.width.toString(), '-h', _this.options.height.toString(), '-fps', _this.options.fps.toString()], { stdio: ['ignore', 'pipe', '0'] }).stdout;
+            return child.spawn('raspivid', ['-t', '0', '-o', '-', '-w', _this.options.width.toString(), '-h', _this.options.height.toString(), '-fps', _this.options.fps.toString()], { stdio: ['ignore', 'pipe', 'ignore'] }).stdout;
         };
         this.broadcast = function (data) {
             _this.wss.clients.forEach(function (socket) {
