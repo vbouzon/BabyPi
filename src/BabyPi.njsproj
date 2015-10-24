@@ -67,22 +67,22 @@
     <Folder Include="vendor\wsavc\" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="public\main.js" />
-    <Compile Include="public\_main.js" />
-    <Compile Include="vendor\broadway\Decoder.js" />
-    <Compile Include="vendor\canvas\FilterWebGLCanvas.js" />
-    <Compile Include="vendor\canvas\Program.js" />
-    <Compile Include="vendor\canvas\Script.js" />
-    <Compile Include="vendor\canvas\Shader.js" />
-    <Compile Include="vendor\canvas\Texture.js" />
-    <Compile Include="vendor\canvas\WebGLCanvas.js" />
-    <Compile Include="vendor\canvas\YUVWebGLCanvas.js" />
-    <Compile Include="vendor\utils\assert.js" />
-    <Compile Include="vendor\utils\error.js" />
-    <Compile Include="vendor\utils\glUtils.js" />
-    <Compile Include="vendor\utils\inherit.js" />
-    <Compile Include="vendor\utils\Size.js" />
-    <Compile Include="vendor\wsavc\index.js" />
+    <Content Include="public\main.js" />
+    <Content Include="public\_main.js" />
+    <Content Include="vendor\broadway\Decoder.js" />
+    <Content Include="vendor\canvas\FilterWebGLCanvas.js" />
+    <Content Include="vendor\canvas\Program.js" />
+    <Content Include="vendor\canvas\Script.js" />
+    <Content Include="vendor\canvas\Shader.js" />
+    <Content Include="vendor\canvas\Texture.js" />
+    <Content Include="vendor\canvas\WebGLCanvas.js" />
+    <Content Include="vendor\canvas\YUVWebGLCanvas.js" />
+    <Content Include="vendor\utils\assert.js" />
+    <Content Include="vendor\utils\error.js" />
+    <Content Include="vendor\utils\glUtils.js" />
+    <Content Include="vendor\utils\inherit.js" />
+    <Content Include="vendor\utils\Size.js" />
+    <Content Include="vendor\wsavc\index.js" />
   </ItemGroup>
   <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
