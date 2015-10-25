@@ -16,7 +16,7 @@ export class Server {
     options = {
         width: 640,
         height: 480,
-        fps: 12
+        fps: 24
     }
 
     initialize = (server) => {
@@ -38,7 +38,7 @@ export class Server {
 
     get_feed = (): stream.Readable => {
 
-        return child.spawn('raspivid', ['-t', '0', '-o', '-', '-w', this.options.width.toString(), '-h', this.options.height.toString(), '-fps', this.options.fps.toString()], { stdio: ['ignore', 'pipe', 'ignore'] }).stdout;
+        return child.spawn('raspivid', ['--nopreview', '-t', '0', '-o', '-', '-w', this.options.width.toString(), '-h', this.options.height.toString(), '-fps', this.options.fps.toString()], { stdio: ['ignore', 'pipe', 'ignore'] }).stdout;
 
 
     }
